@@ -32,12 +32,12 @@ def bruteforce(depense_max, donnees, lst_actions_selectionees=[]):
         """
             On renvoie à la fin la meilleur rentabilité total et la liste des actions et le montant maximum trouvé
         """
-        # return f"la rentabilité maximum obtenue est : \
-        #     {round(sum([i[1] * i[2] for i in lst_actions_selectionees]), 2)}", \
-        #     f"La depense maximum est : {sum([i[1] for i in lst_actions_selectionees])} euros, " \
-        #     f"avec ces actions: {[i[0] for i in lst_actions_selectionees]}"
+        return f"la rentabilité maximum obtenue est : \
+            {round(sum([i[1] * i[2] for i in lst_actions_selectionees]), 2)}", \
+            f"La depense maximum est : {sum([i[1] for i in lst_actions_selectionees])} euros, " \
+            f"avec ces actions: {[i[0] for i in lst_actions_selectionees]}"
 
-        return sum([i[2] for i in lst_actions_selectionees]), lst_actions_selectionees
+        # return sum([i[2] for i in lst_actions_selectionees]), lst_actions_selectionees
 
 
 lst_actions = [

@@ -1,7 +1,23 @@
 import time
+import csv
 
 
-start_time = time.time()
+# On commence le timer
+start = time.time()
+# Ouverture du fichier csv et filtrage des données
+actions = []
+
+with open("dataset1.csv", "r") as csvfile:
+    reader = csv.reader(csvfile)
+    # On saute la première ligne qui contient les noms des champs
+    next(reader)
+    for row in reader:
+        row_float1 = float(row[1])
+        row_float2 = float(row[2])
+        if row_float1 <= 0 or row_float2 <= 0:
+            continue
+        actions.append([row[0], row_float1, row_float2])
+        # print(actions)
 
 
 MAX_VALUE_INVEST = 500
@@ -26,6 +42,13 @@ def dynamic_search(list_actions, max_value=MAX_VALUE_INVEST):
             wallet -= action[1]
         nb_actions -= 1
     max_invest = MAX_VALUE_INVEST - wallet
+    # return (
+    #     f"--------------------------------------------------------------\n\n"
+    #     f"la rentabilité maximum obtenue est : {matrix[-1][-1] / 10}\n\n"
+    #     f"La depense maximum est : {max_invest}\n\n"
+    #     f"Avec ces actions: {[i[0] for i in actions_selection]}\n"
+    # )
+
     return matrix[-1][-1], actions_selection, max_invest
 
 
@@ -52,6 +75,12 @@ lst_actions = [
         ["action_20", 114, 0.18],
     ]
 
-print(dynamic_search(lst_actions))
-print("\nTemps écoulé : ", time.time() - start_time, "seconds")
+
+print(dynamic_search(actions))
+print("\nTemps écoulé : ", time.time() - start, "seconds")
+
+
+
+
+
 
