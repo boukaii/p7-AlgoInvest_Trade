@@ -2,6 +2,7 @@ import time
 import csv
 
 
+
 # On commence le timer
 start = time.time()
 # Ouverture du fichier csv et filtrage des données
