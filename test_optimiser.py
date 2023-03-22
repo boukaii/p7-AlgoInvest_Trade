@@ -1,7 +1,7 @@
 import csv
 
 # Récuparation des donnés du CSV
-with open('dataset2_Python+P7.csv') as data:
+with open('dataset1_Python+P7.csv') as data:
     data = [d for d in csv.DictReader(data, delimiter=',') if float(d['price']) > 0 and float(d['profit']) > 0]
 
 # Filtration par profit
