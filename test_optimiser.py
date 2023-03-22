@@ -1,7 +1,7 @@
 import csv
 
 # Récuparation des donnés du CSV
-with open('20_actions.csv') as data:
+with open('dataset2_Python+P7.csv') as data:
     data = [d for d in csv.DictReader(data, delimiter=',') if float(d['price']) > 0 and float(d['profit']) > 0]
 
 # Filtration par profit
@@ -36,3 +36,7 @@ for item in combination_list:
 
 print(f'Le profit des actions est égal à {calculer_profit(combination_list)} €')
 print(f'Le prix total des actions acheté est égal à {sumcomb(combination_list)} € .')
+
+
+print(calculer_profit(combination_list) / sumcomb(combination_list) * 100)
+
