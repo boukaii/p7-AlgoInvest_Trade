@@ -37,6 +37,4 @@ for item in combination_list:
 print(f'Le profit des actions est égal à {calculer_profit(combination_list)} €')
 print(f'Le prix total des actions acheté est égal à {sumcomb(combination_list)} € .')
 
-
 print(calculer_profit(combination_list) / sumcomb(combination_list) * 100)
-
