@@ -29,7 +29,7 @@ def calculer_profit(comb):
 
 
 """
-    Le résultat de nos prix des anciennes actions + la nouvelle 
+    La somme du résultat de nos prix des anciennes actions + la nouvelle 
     partial_sum représente la totalité du prix des actions testé
     SI partial_sum est inférieur a 500
     ALORS on l'ajoute
