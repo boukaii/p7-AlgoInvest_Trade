@@ -3,10 +3,10 @@
 
 
 # Algorithme Bruteforce :
-bruteforce.py : contient le code bruteforce. Cet aglo n'est pas utilisable pour un grand nombre d'actions (complexité : O(2^n)) Il teste toutes les combinaisons possibles et retourne le meilleur choix à investir.
+bruteforce.py : contient le code bruteforce. Cet algorithme n'est pas utilisable pour un grand nombre d'actions (complexité : O(2^n)) Il teste toutes les combinaisons possibles et retourne le meilleur choix à investir.
 
 # Algorithme Optimisé :
-optimiser.py : contient la solution optimiser
+optimiser.py : contient la solution optimiser. Cet algorithme ne test pas toute les possibilitées mais est beaucoup plus rapide que la solution brutforce.
 
 
 # Contraintes :
