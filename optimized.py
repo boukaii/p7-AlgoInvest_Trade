@@ -11,12 +11,6 @@ with open('dataset1_Python+P7.csv') as data:
 data = sorted(data, key=lambda d: float(d['profit']), reverse=True)
 
 
-"""
-    Boucle sur les actions(qu'on a passé auparavant en paramètres)
-    total_price représente la somme total du prix des actions passées en paramètres grace a notre boucle
-"""
-
-
 def sumcomb(comb):
     total_price = 0
     for element in comb:
@@ -30,13 +24,6 @@ def calculer_profit(comb):
         total_profit += (float(element['profit']) * float(element['price'])) / 100
     return total_profit
 
-
-"""
-    La somme du résultat de nos prix des anciennes actions + la nouvelle 
-    partial_sum représente la totalité du prix des actions testé
-    SI partial_sum est inférieur a 500
-    ALORS on l'ajoute
-"""
 
 combination_list = []
 
